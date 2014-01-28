@@ -1,4 +1,8 @@
+require 'rake'
+require 'yaml'
+
 require_relative 'config/application'
 require './models/recipe'
 
-# your program here
+
+rake db:migrate
