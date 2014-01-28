@@ -7,6 +7,7 @@ puts "Salut Robuchon, what do you want to do today?"
 puts "1. create a recipe"
 puts "2. delete all recipes"
 puts "3. read your recipes"
+puts "4. secret surprise"
 
 choice = gets.chomp.to_i
 
@@ -30,6 +31,11 @@ elsif choice == 2
 elsif choice == 3
   recipes = Recipe.all
   puts recipes
+
+elsif choice == 4
+  recipes = Recipe.all
+  recipes.delete_all 
+  puts "Muahaha"
 
 else
   puts "i did not understand"
